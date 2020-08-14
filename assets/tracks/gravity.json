@@ -1,0 +1,23 @@
+{
+  "instruments": [
+    {
+      "name": "Acoustic Bass",
+      "filename": "assets/sounds/acoustic_bass.wav",
+      "pattern": [0, 17]
+    },
+    {
+      "name": "Acoustic Snare",
+      "filename": "assets/sounds/acoustic_snare.wav",
+      "pattern": [9]
+    },
+    {
+      "name": "Acoustic HiHat",
+      "filename": "assets/sounds/acoustic_hat_closed.wav",
+      "pattern": [0, 3, 6, 9, 12, 15]
+    }
+  ],
+  "title": "Gravity",
+  "beats_per_measure": 6,
+  "divisions_per_beat": 3,
+  "suggested_bpm": 120
+}

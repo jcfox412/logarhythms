@@ -1,0 +1,13 @@
+{
+  "instruments": [
+    {
+      "name": "Instrument",
+      "filename": "internal/audio/testfiles/valid.wav",
+      "pattern": [0, 2, 4, 6]
+    }
+  ],
+  "title": "Valid Track",
+  "beats_per_measure": 4,
+  "divisions_per_beat": 2,
+  "suggested_bpm": 120
+}
