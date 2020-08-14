@@ -1,17 +1,20 @@
 package main
 
 import (
-	// "os"
 	"fmt"
+	"os"
 
 	"github.com/jcfox412/logarhythms/internal/input"
 )
 
 func main() {
 
-	// userInput := input.UserInput{
-	// 	Reader: os.Stdin,
-	// }
+	userInput := input.UserInput{
+		Reader: os.Stdin,
+	}
 
-	fmt.Println(input.PrintMainMenu())
+	if err := userInput.PrintMainMenu(); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }

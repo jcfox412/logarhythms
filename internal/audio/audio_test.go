@@ -58,7 +58,6 @@ func TestSetGetVolume(t *testing.T) {
 			getOutput := a.GetVolume()
 			assert.Equal(t, testCase.expectedOutput, getOutput)
 		}
-
 	}
 }
 

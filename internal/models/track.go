@@ -4,35 +4,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jcfox412/logarhythms/internal/audio"
-	"github.com/jcfox412/logarhythms/internal/utils"
 	"github.com/pkg/errors"
+
+	"github.com/jcfox412/logarhythms/internal/utils"
 )
 
 const (
 	headerPadding      = 2
 	defaultTrackLength = 10 * time.Second
 )
-
-// Instrument stores audio for later playback.
-type Instrument struct {
-	// Name of the instrument, e.g. Snare
-	Name string
-	// File location of the instrument's audio sample (relative to root of project)
-	Filename string
-	// Beat subdivisions where the instrument should be triggered
-	Pattern []int
-	// Manager for audio of instrument
-	Audio audio.Manager
-}
-
-func (i *Instrument) validate() error {
-	if i.Audio == nil {
-		return errors.New("instrument audio manager must not be nil")
-	}
-
-	return nil
-}
 
 // Track is an object which can be played.
 type Track struct {
@@ -94,14 +74,14 @@ func (t *Track) Play() error {
 	beatTicker := time.NewTicker(beatDuration)
 	done := make(chan bool)
 
-	go func() error {
+	go func() {
 		beatDivisionCount := 0
 		fmt.Print(utils.ClearLine(headerWidth))
 
 		for {
 			select {
 			case <-done:
-				return nil
+				return
 			case <-beatTicker.C:
 				if beatDivisionCount == t.BeatsPerMeasure*t.DivisionsPerBeat {
 					beatDivisionCount = 0
@@ -112,7 +92,9 @@ func (t *Track) Play() error {
 
 				beatStr, err := t.triggerBeat(beatDivisionCount)
 				if err != nil {
-					return errors.Wrap(err, "error triggering beat")
+					// not great way to surface this error (since we're in a goroutine)
+					fmt.Print(err.Error())
+					return
 				}
 
 				fmt.Print(beatStr)

@@ -105,13 +105,6 @@ func TestNewTrack(t *testing.T) {
 // TODO: this test does not cover the Play functionality super effectively. If
 // I spent more time on this, I would change Play to make it more testable.
 func TestPlay(t *testing.T) {
-	type input struct {
-		instruments      []*models.Instrument
-		beatsPerMinute   int
-		beatsPerMeasure  int
-		divisionsPerBeat int
-	}
-
 	type testCase struct {
 		description     string
 		input           *models.Track

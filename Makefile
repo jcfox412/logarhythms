@@ -8,7 +8,7 @@ run: build
 
 lint: build
 	# Lint code
-	gometalinter ./...
+	gometalinter ./... --deadline=1m
 
 test:
 	# Running tests
