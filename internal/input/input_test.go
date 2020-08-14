@@ -65,7 +65,7 @@ func TestSettingsMenu(t *testing.T) {
 	testCases := []testCase{
 		{
 			description:     "Errors on non-integer input",
-			input:           "halp",
+			input:           "help",
 			expectedToError: true,
 		},
 	}
@@ -112,7 +112,7 @@ func TestBeatsPerMinuteMenu(t *testing.T) {
 		},
 		{
 			description:     "Errors on non-integer input",
-			input:           "halp",
+			input:           "help",
 			expectedToError: true,
 		},
 		{
@@ -169,7 +169,7 @@ func TestAllInstrumentsVolumeMenu(t *testing.T) {
 		},
 		{
 			description: "Errors on non-integer input",
-			input:       "halp",
+			input:       "help",
 			setupMocks: func(m *audiomocks.Manager) {
 				m.On("GetVolume").Return(instrumentVolume).Once()
 			},
@@ -229,7 +229,7 @@ func TestInstrumentVolumeMenu(t *testing.T) {
 		},
 		{
 			description:        "Errors on non-integer input",
-			input:              "halp",
+			input:              "help",
 			shouldIncludeAudio: true,
 			setupMocks: func(m *audiomocks.Manager) {
 				m.On("GetVolume").Return(initialInstrumentVolume).Twice()
@@ -312,7 +312,7 @@ func TestTrackLengthMenu(t *testing.T) {
 		},
 		{
 			description:     "Errors on non-integer input",
-			input:           "halp",
+			input:           "help",
 			expectedToError: true,
 		},
 		{

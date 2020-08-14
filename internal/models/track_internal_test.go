@@ -122,10 +122,10 @@ func TestMakePattern(t *testing.T) {
 	testInstrument1 := &Instrument{Name: "testInstrument1", Pattern: []int{0, 1, 2}}
 	testInstrument2 := &Instrument{Name: "testInstrument2", Pattern: []int{1, 2}}
 	testPattern := [][]*Instrument{
-		[]*Instrument{testInstrument1, nil},
-		[]*Instrument{testInstrument1, testInstrument2},
-		[]*Instrument{testInstrument1, testInstrument2},
-		[]*Instrument{nil, nil},
+		{testInstrument1, nil},
+		{testInstrument1, testInstrument2},
+		{testInstrument1, testInstrument2},
+		{nil, nil},
 	}
 
 	testCases := []testCase{
@@ -192,7 +192,7 @@ func TestTriggerBeat(t *testing.T) {
 			input: input{
 				track: &Track{
 					Patterns: [][]*Instrument{
-						[]*Instrument{},
+						{},
 					},
 					DivisionsPerBeat: 1,
 				},
@@ -211,7 +211,7 @@ func TestTriggerBeat(t *testing.T) {
 						testInstrument2,
 					},
 					Patterns: [][]*Instrument{
-						[]*Instrument{
+						{
 							testInstrument1,
 							nil,
 						},
@@ -235,7 +235,7 @@ func TestTriggerBeat(t *testing.T) {
 						testInstrument2,
 					},
 					Patterns: [][]*Instrument{
-						[]*Instrument{
+						{
 							testInstrument1,
 							testInstrument2,
 						},

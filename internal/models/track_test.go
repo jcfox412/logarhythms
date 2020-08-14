@@ -125,11 +125,11 @@ func TestPlay(t *testing.T) {
 					testInstrument2,
 				},
 				Patterns: [][]*models.Instrument{
-					[]*models.Instrument{
+					{
 						testInstrument1,
 						testInstrument2,
 					},
-					[]*models.Instrument{},
+					{},
 				},
 				BeatsPerMinute:   1000,
 				BeatsPerMeasure:  2,
