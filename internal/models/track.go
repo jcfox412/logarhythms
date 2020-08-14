@@ -24,7 +24,7 @@ type Track struct {
 	BeatsPerMinute int
 	// Number of beats per measure
 	BeatsPerMeasure int
-	// Number of times to devide each beat (e.g. 1 for quarter notes, 2 for eigth notes)
+	// Number of times to divide each beat (e.g. 1 for quarter notes, 2 for eighth notes)
 	DivisionsPerBeat int
 	// Instruments used in the track.
 	Instruments []*Instrument

@@ -106,7 +106,7 @@ func TestRetry(t *testing.T) {
 						return nil
 					}
 
-					return errors.New("halp")
+					return errors.New("help")
 				},
 			},
 			expectedToError: false,
@@ -119,7 +119,7 @@ func TestRetry(t *testing.T) {
 				f: func(i interface{}) error {
 					callCount := i.(*callCounter)
 					callCount.count++
-					return errors.New("halp")
+					return errors.New("help")
 				},
 			},
 			expectedToError: true,
