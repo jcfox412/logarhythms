@@ -18,7 +18,7 @@ To run, simply execute the following command:
 make run
 ```
 
-## Prerequisite
+## Prerequisites
 
 Please make sure you have `go` installed before attempting to run.
 
