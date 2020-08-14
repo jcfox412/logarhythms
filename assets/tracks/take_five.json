@@ -1,0 +1,23 @@
+{
+  "instruments": [
+    {
+      "name": "Bass",
+      "filename": "assets/sounds/acoustic_bass.wav",
+      "pattern": [0, 5, 9, 12]
+    },
+    {
+      "name": "Snare",
+      "filename": "assets/sounds/acoustic_snare.wav",
+      "pattern": [2, 6, 9, 12]
+    },
+    {
+      "name": "HiHat",
+      "filename": "assets/sounds/acoustic_ride.wav",
+      "pattern": [0, 3, 6, 9, 11, 12]
+    }
+  ],
+  "title": "Take Five",
+  "beatsPerMeasure": 5,
+  "divisionsPerBeat": 3,
+  "suggestedBPM": 160
+}

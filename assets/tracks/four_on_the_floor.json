@@ -1,0 +1,23 @@
+{
+  "instruments": [
+    {
+      "name": "Kick",
+      "filename": "assets/sounds/kick.wav",
+      "pattern": [0, 2, 4, 6]
+    },
+    {
+      "name": "Snare",
+      "filename": "assets/sounds/snare.wav",
+      "pattern": [2, 6]
+    },
+    {
+      "name": "HiHat",
+      "filename": "assets/sounds/hihat.wav",
+      "pattern": [1, 3, 5, 7]
+    }
+  ],
+  "title": "Four on the Floor",
+  "beatsPerMeasure": 4,
+  "divisionsPerBeat": 2,
+  "suggestedBPM": 128
+}
