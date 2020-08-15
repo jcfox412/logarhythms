@@ -256,9 +256,6 @@ func getUserInput(stdin io.Reader) string {
 }
 
 func validateBoundedIntegerInput(input string, lowerBound, upperBound int) (int, error) {
-	fmt.Println("----------------------")
-	fmt.Println(input)
-	fmt.Println("----------------------")
 	inputInt, err := strconv.Atoi(input)
 	if err != nil {
 		return 0, errors.New("input must be an integer")
